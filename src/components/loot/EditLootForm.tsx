@@ -28,7 +28,7 @@ export const EditLootForm = forwardRef<HTMLInputElement, EditLootFormProps>(
 			<form onSubmit={saveEdits}>
 				<FormControl isRequired>
 					<FormLabel>Item Quantity</FormLabel>
-					<NumberInput min={1} value={item.quantity}>
+					<NumberInput min={1} defaultValue={item.quantity}>
 						<NumberInputField />
 						<NumberInputStepper>
 							<NumberIncrementStepper />
@@ -38,7 +38,7 @@ export const EditLootForm = forwardRef<HTMLInputElement, EditLootFormProps>(
 				</FormControl>
 				<FormControl>
 					<FormLabel>Item Notes</FormLabel>
-					<Input type="text" value={item.notes} />
+					<Input type="text" defaultValue={item.notes} />
 				</FormControl>
 				<Button colorScheme="blue" mt="1em" type="submit">
 					Save
