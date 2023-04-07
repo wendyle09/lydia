@@ -8,7 +8,7 @@ export const PartyTabs = () => {
 	const { parties } = useContext(SessionContext);
 
 	return (
-		<Tabs isLazy>
+		<Tabs isLazy variant="enclosed-colored">
 			<TabList>
 				{parties.map(({ id, name }: Party) => {
 					return <Tab key={id}>{name}</Tab>;
