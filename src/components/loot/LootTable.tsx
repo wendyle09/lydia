@@ -26,6 +26,7 @@ export const LootTable = ({ partyId }: LootTableProps) => {
 		<Table>
 			<Thead>
 				<Tr>
+					<Th></Th>
 					<Th>Name</Th>
 					<Th>Quantity</Th>
 					<Th>Sell Price per Unit (gp)</Th>

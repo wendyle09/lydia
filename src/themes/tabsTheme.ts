@@ -7,7 +7,7 @@ const TabsTheme = helpers.defineMultiStyleConfig({
 		tab: {
 			borderRadius: "0px",
 			_focus: {
-				outline: "0px",
+				outline: "none",
 			},
 		},
 	},
