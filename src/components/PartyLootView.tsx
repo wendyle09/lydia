@@ -1,4 +1,4 @@
-import { Container, HStack } from "@chakra-ui/react";
+import { HStack } from "@chakra-ui/react";
 import { SessionContext } from "../contexts/session";
 import { Party } from "../types/party";
 import { NewPartyDrawer } from "./party/NewPartyDrawer";
@@ -19,13 +19,11 @@ export const PartyLootView = () => {
 	];
 
 	return (
-		<Container maxW="container.md">
-			<SessionContext.Provider value={{ parties }}>
-				<HStack mb="1em" spacing="1em">
-					<NewPartyDrawer />
-				</HStack>
-				<PartyTabs />
-			</SessionContext.Provider>
-		</Container>
+		<SessionContext.Provider value={{ parties }}>
+			<HStack mb="1em" spacing="1em">
+				<NewPartyDrawer />
+			</HStack>
+			<PartyTabs />
+		</SessionContext.Provider>
 	);
 };

@@ -24,9 +24,11 @@ export const DeleteLootModal = ({ item, partyName }: DeleteLootModalProps) => {
 		<>
 			<IconButton
 				aria-label="Delete item"
+				colorScheme="red"
+				h={8}
 				icon={<RiDeleteBin2Line />}
+				minW={8}
 				onClick={onOpen}
-				variant="icon"
 			/>
 			<Modal isOpen={isOpen} onClose={onClose}>
 				<ModalOverlay />

@@ -11,14 +11,15 @@ export const LootTable = ({ party }: LootTableProps) => {
 	const loot: Loot[] = [
 		{
 			id: "1",
-			name: "Item 1",
-			notes: "Notes about this item",
+			name: "Acid Flask (Moderate)",
+			notes:
+				"Obtained in session 10; in bag of holdding; lakdsjf ladkslfajsdklfasdjasdjfladjksflajsfkladksjfa sdkaldjksfldklfajsfaj ksd",
 			quantity: 1,
 			sellPrice: 1,
 		},
 		{
 			id: "2",
-			name: "Item 2",
+			name: "Alchemist's Fire (Moderate)",
 			quantity: 2,
 			sellPrice: 2,
 		},
@@ -30,8 +31,12 @@ export const LootTable = ({ party }: LootTableProps) => {
 				<Tr>
 					<Th></Th>
 					<Th>Name</Th>
-					<Th>Quantity</Th>
-					<Th>Sell Price per Unit (gp)</Th>
+					<Th>Count</Th>
+					<Th maxW={40}>
+						Sell Price
+						<br />
+						per Unit (gp)
+					</Th>
 					<Th>Notes</Th>
 				</Tr>
 			</Thead>

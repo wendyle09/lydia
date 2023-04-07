@@ -18,7 +18,7 @@ export const LootTableRow = ({ item, partyName }: LootListItemProps) => {
 			<Td>{item.name}</Td>
 			<Td>{item.quantity}</Td>
 			<Td>{item.sellPrice}</Td>
-			<Td>{item.notes}</Td>
+			<Td maxW={400}>{item.notes}</Td>
 		</Tr>
 	);
 };
