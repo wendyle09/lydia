@@ -8,12 +8,8 @@ import {
 	useDisclosure,
 } from "@chakra-ui/react";
 import { useRef } from "react";
+import { GoPlus } from "react-icons/go";
 import { NewPartyForm } from "./NewPartyForm";
-
-interface NewPartyModalProps {
-	isOpen: boolean;
-	onClose: VoidFunction;
-}
 
 export const NewPartyDrawer = () => {
 	const nameInputRef = useRef<HTMLInputElement>(null);
@@ -22,8 +18,13 @@ export const NewPartyDrawer = () => {
 
 	return (
 		<>
-			<Button onClick={onOpen} size="sm">
-				Add Party
+			<Button
+				colorScheme="green"
+				leftIcon={<GoPlus />}
+				onClick={onOpen}
+				size="sm"
+			>
+				New Party
 			</Button>
 			<Drawer initialFocusRef={nameInputRef} isOpen={isOpen} onClose={onClose}>
 				<DrawerOverlay />
