@@ -1,12 +1,13 @@
 import { Table, Tbody, Th, Thead, Tr } from "@chakra-ui/react";
 import { Loot } from "../../types/loot";
+import { Party } from "../../types/party";
 import { LootTableRow } from "./LootTableRow";
 
 interface LootTableProps {
-	partyId: string;
+	party: Party;
 }
 
-export const LootTable = ({ partyId }: LootTableProps) => {
+export const LootTable = ({ party }: LootTableProps) => {
 	const loot: Loot[] = [
 		{
 			id: "1",
@@ -36,7 +37,9 @@ export const LootTable = ({ partyId }: LootTableProps) => {
 			</Thead>
 			<Tbody>
 				{loot.map((item: Loot) => {
-					return <LootTableRow item={item} key={item.id} />;
+					return (
+						<LootTableRow item={item} key={item.id} partyName={party.name} />
+					);
 				})}
 			</Tbody>
 		</Table>
