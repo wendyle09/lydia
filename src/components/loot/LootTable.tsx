@@ -11,6 +11,7 @@ export const LootTable = ({ partyId }: LootTableProps) => {
 		{
 			id: "1",
 			name: "Item 1",
+			notes: "Notes about this item",
 			quantity: 1,
 			sellPrice: 1,
 		},
