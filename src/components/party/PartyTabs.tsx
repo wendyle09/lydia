@@ -15,8 +15,8 @@ export const PartyTabs = () => {
 				})}
 			</TabList>
 			<TabPanels>
-				{parties.map(({ id }: Party) => {
-					return <PartyTabPanel partyId={id} key={id} />;
+				{parties.map((party: Party) => {
+					return <PartyTabPanel party={party} key={party.id} />;
 				})}
 			</TabPanels>
 		</Tabs>

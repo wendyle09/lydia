@@ -1,14 +1,15 @@
 import { TabPanel } from "@chakra-ui/react";
+import { Party } from "../../types/party";
 import { LootTable } from "../loot/LootTable";
 
 interface PartyTabPanelProps {
-	partyId: string;
+	party: Party;
 }
 
-export const PartyTabPanel = ({ partyId }: PartyTabPanelProps) => {
+export const PartyTabPanel = ({ party }: PartyTabPanelProps) => {
 	return (
 		<TabPanel>
-			<LootTable partyId={partyId} />
+			<LootTable party={party} />
 		</TabPanel>
 	);
 };

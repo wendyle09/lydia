@@ -22,9 +22,11 @@ export const EditLootDrawer = ({ item }: EditLootDrawerProps) => {
 		<>
 			<IconButton
 				aria-label="Edit item"
+				h={8}
 				icon={<FaEdit />}
+				minW={8}
+				mr={2}
 				onClick={onOpen}
-				variant="icon"
 			/>
 			<Drawer isOpen={isOpen} onClose={onClose}>
 				<DrawerOverlay />
