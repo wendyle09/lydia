@@ -20,6 +20,11 @@ interface DeleteLootModalProps {
 export const DeleteLootModal = ({ item, partyName }: DeleteLootModalProps) => {
 	const { isOpen, onClose, onOpen } = useDisclosure();
 
+	const onDeleteConfirm = () => {
+		console.log(`Deleted ${item.name}`);
+		onClose();
+	};
+
 	return (
 		<>
 			<IconButton
@@ -40,7 +45,7 @@ export const DeleteLootModal = ({ item, partyName }: DeleteLootModalProps) => {
 					</ModalBody>
 					<ModalFooter>
 						<Button onClick={onClose}>No</Button>
-						<Button colorScheme="red" ml={2}>
+						<Button colorScheme="red" ml={2} onClick={onDeleteConfirm}>
 							Yes, Delete
 						</Button>
 					</ModalFooter>
