@@ -10,7 +10,7 @@ interface PartyTabPanelProps {
 export const PartyTabPanel = ({ party }: PartyTabPanelProps) => {
 	return (
 		<TabPanel>
-			<Box textAlign="none" w="100%">
+			<Box textAlign="left" w="100%">
 				<DeletePartyModal party={party} />
 			</Box>
 			<LootTable party={party} />
