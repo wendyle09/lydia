@@ -12,6 +12,7 @@ import {
 import { GoPlus } from "react-icons/go";
 import { Party } from "../../types/party";
 import { AddLootForm } from "./AddLootForm";
+import { SearchLootBox } from "./SearchLootBox";
 
 interface AddLootDrawerProps {
 	party: Party;
@@ -37,7 +38,7 @@ export const AddLootDrawer = ({ party }: AddLootDrawerProps) => {
 				<DrawerContent>
 					<DrawerHeader>Add Loot</DrawerHeader>
 					<DrawerBody>
-						<AddLootForm onClose={onClose} />
+						<SearchLootBox onClose={onClose} />
 					</DrawerBody>
 				</DrawerContent>
 			</Drawer>
