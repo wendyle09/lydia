@@ -40,7 +40,7 @@ export const EditLootForm = forwardRef<HTMLInputElement, EditLootFormProps>(
 					<FormLabel>Item Notes</FormLabel>
 					<Input type="text" defaultValue={item.notes} />
 				</FormControl>
-				<Button colorScheme="blue" mt="1em" type="submit">
+				<Button colorScheme="blue" mt="3" type="submit">
 					Save
 				</Button>
 			</form>

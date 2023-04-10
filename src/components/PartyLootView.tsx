@@ -1,4 +1,4 @@
-import { HStack } from "@chakra-ui/react";
+import { Box, HStack } from "@chakra-ui/react";
 import { SessionContext } from "../contexts/session";
 import { Party } from "../types/party";
 import { NewPartyDrawer } from "./party/NewPartyDrawer";
@@ -20,9 +20,9 @@ export const PartyLootView = () => {
 
 	return (
 		<SessionContext.Provider value={{ parties }}>
-			<HStack mb="1em" spacing="1em">
+			<Box mb="3" textAlign="left" w="100%">
 				<NewPartyDrawer />
-			</HStack>
+			</Box>
 			<PartyTabs />
 		</SessionContext.Provider>
 	);

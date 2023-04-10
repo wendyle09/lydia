@@ -29,7 +29,7 @@ export const NewPartyForm = forwardRef<HTMLInputElement, NewPartyFormProps>(
 						type="text"
 					/>
 				</FormControl>
-				<Button colorScheme="blue" mt="1em" type="submit">
+				<Button colorScheme="blue" mt="3" type="submit">
 					Create
 				</Button>
 			</form>

@@ -40,7 +40,7 @@ export const AddLootForm = forwardRef<HTMLInputElement, AddLootFormProps>(
 					<FormLabel>Notes</FormLabel>
 					<Input type="text" />
 				</FormControl>
-				<Button colorScheme="blue" mt="1em" type="submit">
+				<Button colorScheme="blue" mt="3" type="submit">
 					Add
 				</Button>
 			</form>
