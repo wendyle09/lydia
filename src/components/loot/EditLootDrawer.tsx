@@ -25,7 +25,7 @@ export const EditLootDrawer = ({ item }: EditLootDrawerProps) => {
 				h={8}
 				icon={<FaEdit />}
 				minW={8}
-				mr={2}
+				mr={1}
 				onClick={onOpen}
 			/>
 			<Drawer isOpen={isOpen} onClose={onClose}>
