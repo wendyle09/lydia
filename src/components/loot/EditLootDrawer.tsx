@@ -31,7 +31,7 @@ export const EditLootDrawer = ({ item }: EditLootDrawerProps) => {
 			<Drawer isOpen={isOpen} onClose={onClose}>
 				<DrawerOverlay />
 				<DrawerContent>
-					<DrawerHeader>Edit Loot</DrawerHeader>
+					<DrawerHeader>{`Edit ${item.name}`}</DrawerHeader>
 					<DrawerBody>
 						<EditLootForm item={item} onClose={onClose} />
 					</DrawerBody>

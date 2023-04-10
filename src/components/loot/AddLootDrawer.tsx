@@ -9,7 +9,6 @@ import {
 	DrawerOverlay,
 	useDisclosure,
 } from "@chakra-ui/react";
-import React from "react";
 import { GoPlus } from "react-icons/go";
 import { Party } from "../../types/party";
 import { AddLootForm } from "./AddLootForm";
@@ -36,7 +35,7 @@ export const AddLootDrawer = ({ party }: AddLootDrawerProps) => {
 			<Drawer isOpen={isOpen} onClose={onClose}>
 				<DrawerOverlay />
 				<DrawerContent>
-					<DrawerHeader>Edit Loot</DrawerHeader>
+					<DrawerHeader>Add Loot</DrawerHeader>
 					<DrawerBody>
 						<AddLootForm onClose={onClose} />
 					</DrawerBody>

@@ -13,21 +13,22 @@ import { forwardRef } from "react";
 import { Loot } from "../../types/loot";
 
 interface AddLootFormProps {
+	item: Loot;
 	onClose: VoidFunction;
 }
 
 export const AddLootForm = forwardRef<HTMLInputElement, AddLootFormProps>(
-	({ onClose }, ref) => {
+	({ item, onClose }, ref) => {
 		const addLoot = () => {
-			console.log("Saved changes");
+			console.log(`Added ${item.name}`);
 			//onClose();
 		};
 
 		return (
 			<form onSubmit={addLoot}>
 				<FormControl isRequired>
-					<FormLabel>Item Quantity</FormLabel>
-					<NumberInput min={1} defaultValue={1}>
+					<FormLabel>Quantity</FormLabel>
+					<NumberInput min={1} defaultValue={item.quantity}>
 						<NumberInputField />
 						<NumberInputStepper>
 							<NumberIncrementStepper />
@@ -36,11 +37,11 @@ export const AddLootForm = forwardRef<HTMLInputElement, AddLootFormProps>(
 					</NumberInput>
 				</FormControl>
 				<FormControl>
-					<FormLabel>Item Notes</FormLabel>
+					<FormLabel>Notes</FormLabel>
 					<Input type="text" />
 				</FormControl>
 				<Button colorScheme="blue" mt="1em" type="submit">
-					Save
+					Add
 				</Button>
 			</form>
 		);
