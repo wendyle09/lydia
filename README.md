@@ -2,9 +2,7 @@
 
 _I am sworn to carry your burdens._
 
-This app allows you to track your PF2 party's loot and calculates the sale value of your items.
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This app allows you to track your PF2 party's loot and calculates the sell value of your items.
 
 ## Available Scripts
 
