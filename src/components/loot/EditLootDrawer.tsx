@@ -21,7 +21,7 @@ export const EditLootDrawer = ({ item }: EditLootDrawerProps) => {
 	return (
 		<>
 			<IconButton
-				aria-label="Edit item"
+				aria-label="Edit loot"
 				h={8}
 				icon={<FaEdit />}
 				minW={8}
