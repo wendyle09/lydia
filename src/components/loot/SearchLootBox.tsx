@@ -1,30 +1,30 @@
-import {
-	Box,
-	Button,
-	FormControl,
-	FormLabel,
-	Input,
-	Text,
-} from "@chakra-ui/react";
-import { forwardRef } from "react";
-import { Loot } from "../../types/loot";
+import { Box, Button, FormControl, FormLabel, Input } from "@chakra-ui/react";
+import React, { forwardRef } from "react";
+import { Equipment } from "../../types/equipment";
 
 interface AddLootFormProps {
+	itemsMatched: Equipment[];
 	onClose: VoidFunction;
+	onSearchTermInput: (e: React.ChangeEvent<HTMLInputElement>) => void;
+	queryForItems: VoidFunction;
 }
 
 export const SearchLootBox = forwardRef<HTMLInputElement, AddLootFormProps>(
-	({ onClose }, ref) => {
+	({ itemsMatched, onClose, onSearchTermInput, queryForItems }, ref) => {
 		return (
 			<Box>
 				<FormControl>
 					<FormLabel>Item Name</FormLabel>
-					<Input placeholder="Alchemist's fire" type="text" />
+					<Input
+						onInput={onSearchTermInput}
+						placeholder="Alchemist's fire"
+						type="text"
+					/>
 				</FormControl>
-				<Button colorScheme="blue" mt="3">
+				<Button colorScheme="blue" mt="3" onClick={queryForItems}>
 					Search
 				</Button>
-				<Button ml="1" mt="3">
+				<Button ml="2" mt="3" onClick={onClose}>
 					Cancel
 				</Button>
 			</Box>
